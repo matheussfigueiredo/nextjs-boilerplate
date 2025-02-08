@@ -40,12 +40,21 @@ export interface FlexProps
     VariantProps<typeof flexVariants> {}
 
 const Flex = React.forwardRef<HTMLDivElement, FlexProps>(
-  ({ orientation, className, ...props }, ref) => {
+  (
+    {
+      orientation = "horizontal",
+      align = "center",
+      justify,
+      className,
+      ...props
+    },
+    ref
+  ) => {
     return (
       <div
         {...props}
         ref={ref}
-        className={cn(flexVariants({ orientation, className }))}
+        className={cn(flexVariants({ orientation, align, justify, className }))}
       />
     );
   }
