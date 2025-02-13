@@ -1,14 +1,14 @@
 import { cn } from "@/lib/utils";
 import React from "react";
-import * as UI from "@/components/core";
 import { UserRoundXIcon } from "lucide-react";
 import { shortName } from "@/utils/functions/short-name";
+import * as AV from "@/components/core/data-display/avatar";
 
 export interface UserAvatarProps
-  extends React.ComponentPropsWithoutRef<typeof UI.AvatarImage> {}
+  extends React.ComponentPropsWithoutRef<typeof AV.AvatarImage> {}
 
 export const UserAvatar = React.forwardRef<
-  React.ComponentRef<typeof UI.AvatarImage>,
+  React.ComponentRef<typeof AV.AvatarImage>,
   UserAvatarProps
 >(
   (
@@ -22,27 +22,27 @@ export const UserAvatar = React.forwardRef<
   ) => {
     if (!alt && !src) {
       return (
-        <UI.Avatar
+        <AV.Avatar
           {...props}
           ref={ref}
           data-testid="avatar-root"
           className={cn("bg-accent", className)}
         >
           <UserRoundXIcon data-testid="avatar-icon" />
-        </UI.Avatar>
+        </AV.Avatar>
       );
     }
 
     return (
-      <UI.Avatar
+      <AV.Avatar
         {...props}
         ref={ref}
         data-testid="avatar-root"
         className={cn("bg-accent", className)}
       >
-        <UI.AvatarImage src={src} alt={alt} />
-        <UI.AvatarFallback>{shortName(alt)}</UI.AvatarFallback>
-      </UI.Avatar>
+        <AV.AvatarImage src={src} alt={alt} />
+        <AV.AvatarFallback>{shortName(alt)}</AV.AvatarFallback>
+      </AV.Avatar>
     );
   }
 );
