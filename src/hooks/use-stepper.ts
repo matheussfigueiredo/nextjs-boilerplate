@@ -1,4 +1,4 @@
-import { StepperItem } from "@/components";
+import { StepperItem } from "@/components/blocks/stepper";
 import * as React from "react";
 
 type UseStepperProps = {
