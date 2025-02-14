@@ -10,7 +10,8 @@
     "test": "vitest",
     "test:watch": "vitest --watch",
     "test:coverage": "vitest run --coverage",
-    "prepare": "husky"
+    "prepare": "husky",
+    "clean": "rm -rf .next coverage"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
