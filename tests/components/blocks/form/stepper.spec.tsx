@@ -1,4 +1,4 @@
-import { Stepper, StepperItem } from "@/components";
+import { Stepper, StepperItem } from "@/components/blocks/stepper";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { vi } from "vitest";
 

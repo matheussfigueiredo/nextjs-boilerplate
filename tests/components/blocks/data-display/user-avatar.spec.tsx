@@ -1,4 +1,4 @@
-import { UserAvatar } from "@/components";
+import { UserAvatar } from "@/components/blocks/user-avatar";
 import { render, screen } from "@testing-library/react";
 import { expect, it } from "vitest";
 
