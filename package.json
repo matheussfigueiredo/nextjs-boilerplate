@@ -11,7 +11,7 @@
     "test:watch": "vitest --watch",
     "test:coverage": "vitest run --coverage",
     "prepare": "husky",
-    "clean": "rm -rf .next coverage"
+    "clean": "rimraf .next coverage"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -81,6 +81,7 @@
     "prettier": "^3.5.1",
     "prettier-plugin-organize-imports": "^4.1.0",
     "prettier-plugin-tailwindcss": "^0.6.11",
+    "rimraf": "^6.0.1",
     "tailwindcss": "^4.0.0",
     "typescript": "^5",
     "vite-tsconfig-paths": "^5.1.4",
