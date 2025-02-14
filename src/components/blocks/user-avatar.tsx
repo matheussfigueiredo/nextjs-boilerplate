@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import React from "react";
 import { UserRoundXIcon } from "lucide-react";
 import { shortName } from "@/utils/functions/short-name";
-import * as AV from "@/components/core/data-display/avatar";
+import * as AV from "@/components/ui/avatar";
 
 export interface UserAvatarProps
   extends React.ComponentPropsWithoutRef<typeof AV.AvatarImage> {}
