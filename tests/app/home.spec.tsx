@@ -1,6 +1,6 @@
-import Home from "@/app/page";
+import Home from "@/app/(public)/(welcome)/page";
 import { render, screen } from "@testing-library/react";
-import { expect, it, describe } from "vitest";
+import { describe, expect, it } from "vitest";
 
 describe("Home Page", () => {
   it("renders Next.js logo", () => {
